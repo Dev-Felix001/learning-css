@@ -8,35 +8,28 @@
 <link rel="stylesheet" href="style.css">
 <script src="script.js"></script>
 <body>
-/* unvisited link */
-a:link {
-  color: red;
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
 
-/* visited link */
-a:visited {
-  color: green;
-}
-
-/* mouse over link */
-a:hover {
-  color: hotpink;
-}
-
-/* selected link */
-a:active {
-  color: blue;
+a:hover, a:active {
+  background-color: red;
 }
 </style>
 </head>
 <body>
 
-<h1>Style a link depending on state</h1>
+<h2>Link Button</h2>
 
-<p><a href="default.asp" target="_blank">This is a link</a></p>
-
-<p><b>Note:</b> :hover must come after :link and :visited in order to be effective.</p>
-<p><b>Note:</b> :active must come after :hover in order to be effective.</p>
+<p>A link styled as a button:</p>
+<a href="default.asp" target="_blank">This is a link</a> 
+</body>
+</html>
 
 </body>
 </html>
