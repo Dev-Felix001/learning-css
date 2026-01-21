@@ -12,42 +12,29 @@
 <html>
 <head>
 <style>
-#panel, .flip {
-  padding: 10px;
-  text-align: center;
-  background-color: #04AA6D;
-  color: white;
-  border: solid 1px #a6d8a8;
-  margin: auto;
-  cursor: pointer;  
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-#panel {
-  display: none;
-  cursor: auto;
+li {
+  display: inline;
 }
 </style>
 </head>
 <body>
 
-<p class="flip" onclick="myFunction()">Click to show/hide panel</p>
+<p>Display a list of links as a horizontal menu:</p>
 
-<div id="panel">
-  <p>The panel toggles between hiding and showing a div element.</p>
-  <p>W use JavaScript to open and close it.</p>
-  <p>You will learn more about JavaScript in our JavaScript Tutorial.</p>
-</div>
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
 
-<script>
-function myFunction() {
-  var x = document.getElementById("panel");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-</script>
 
 </body>
 </html>
+
