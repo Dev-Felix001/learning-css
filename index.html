@@ -9,55 +9,31 @@
 <script src="script.js"></script>
 <body>
 <style>
-.imgbox {
-  float:left;
-  text-align: center;
-  width: 120px;
-  border: 1px solid gray;
-  margin: 4px;
-  padding: 6px;
+<style>
+div.ex1 {
+  width: 500px;
+  margin: auto;
+  border: 3px solid #73AD21;
 }
 
-button {
-  width: 100%;
+div.ex2 {
+  max-width: 500px;
+  margin: auto;
+  border: 3px solid #73AD21;
 }
 </style>
 </head>
 <body>
 
-<h2>Difference between display:none and visiblity: hidden</h2>
-<p><strong>visibility:hidden</strong> hides the element, but it still takes up space in the layout.</p>
-<p><strong>display:none</strong> removes the element from the document. It does not take up any space.</p>
+<h2>CSS Max-width</h2>
 
-<div class="imgbox" id="imgbox1">Box 1<br>
-  <img src="img_5terre.jpg" alt="Italy" style="width:100%">
-  <button onclick="removeElement()">Remove</button>
-</div>
+<div class="ex1">This div element has width: 500px;</div>
+<br>
 
-<div class="imgbox" id="imgbox2">Box 2<br>
-  <img src="img_lights.jpg" alt="Lights" style="width:100%">
-  <button onclick="changeVisibility()">Hide</button>
-</div>
+<div class="ex2">This div element has max-width: 500px;</div>
 
-<div class="imgbox">Box 3<br>
-  <img src="img_forest.jpg" alt="Forest" style="width:100%">
-  <button onclick="resetElement()">Reset All</button>
-</div>
-
-<script>
-function removeElement() {
-  document.getElementById("imgbox1").style.display = "none";
-}
-
-function changeVisibility() {
-  document.getElementById("imgbox2").style.visibility = "hidden";
-}
-
-function resetElement() {
-  document.getElementById("imgbox1").style.display = "block";
-  document.getElementById("imgbox2").style.visibility = "visible";
-}
-</script>
+<p><strong>Tip:</strong> Drag the browser window to smaller than 500px wide, to see the difference between 
+the two divs!</p>
 
 </body>
 </html>
