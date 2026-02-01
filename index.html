@@ -8,16 +8,23 @@
 <link rel="stylesheet" href="style.css">
 <script src="script.js"></script>
 <body>
-</style>
-</head>
-<body>
+<style>
+div {
+  background-color: coral;
+  width: 200px;
+  height: 65px;
+  border: 1px solid black;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-y: scroll; /* Add vertical scrollbar */
+}
 </style>
 </head>
 <body>
 
-<h2>Overflow: scroll</h2>
+<h2>CSS overflow-x and overflow-y</h2>
 
-<p>Setting the overflow value to scroll, the overflow is clipped and a scrollbar is added to scroll inside the box. Note that this will add a scrollbar both horizontally and vertically (even if you do not need it):</p>
+<p>overflow-x specifies what to do with the left/right edges of the content.</p>
+<p>overflow-y specifies what to do with the top/bottom edges of the content.</p>
 
 <div>You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
 
