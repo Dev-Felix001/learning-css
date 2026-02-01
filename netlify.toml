@@ -1,0 +1,3 @@
+[build]
+publish = "."   # if your index.html is at the root of your repo
+
