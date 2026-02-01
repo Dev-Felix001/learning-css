@@ -1,3 +1,3 @@
 [build]
-command = "npm run build"  # only if you need to generate dist
-publish = "dist"
+  command = "cd learning-css && npm ci && npm run build"
+  publish = "learning-css/dist"  # replace 'dist' with your build output folder
