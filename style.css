@@ -2,90 +2,98 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Comic Sans MS", cursive;
 }
 
-/* Video background */
-#bgVideo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-
-/* Overlay */
-.overlay {
+/* Valentine background */
+body {
   height: 100vh;
-  background: rgba(0,0,0,0.4);
+  background: linear-gradient(135deg, #ff4e8d, #ff9a9e, #fad0c4);
+  overflow: hidden;
+}
+
+/* Main container */
+.container {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
   text-align: center;
+  z-index: 2;
+  position: relative;
 }
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   margin-bottom: 40px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
 
 /* Buttons */
 .buttons {
   position: relative;
-  width: 300px;
-  height: 150px;
+  width: 320px;
+  height: 160px;
 }
 
 button {
-  padding: 12px 28px;
+  padding: 14px 30px;
   font-size: 18px;
   border: none;
-  border-radius: 30px;
+  border-radius: 40px;
   cursor: pointer;
   position: absolute;
-  transition: transform 0.15s;
+  transition: transform 0.1s;
 }
 
 #yesBtn {
-  background: #ff4081;
+  background: #ff2d75;
   color: white;
-  left: 30px;
+  left: 20px;
 }
 
 #noBtn {
-  background: #ccc;
+  background: #f1f1f1;
   color: #333;
-  left: 160px;
+  left: 180px;
 }
 
-/* Shake animation */
-@keyframes shake {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  50% { transform: translateX(5px); }
-  75% { transform: translateX(-5px); }
-  100% { transform: translateX(0); }
-}
-
+/* Message */
 #message {
   margin-top: 30px;
   font-size: 22px;
-  color: #ffb6c1;
+  color: #fff5f8;
 }
 
-/* Floating hearts */
-.heart {
+/* Floating decorations */
+.decoration {
   position: fixed;
-  bottom: 0;
-  font-size: 24px;
-  animation: float 4s linear forwards;
+  bottom: -50px;
+  font-size: 28px;
+  animation: floatUp linear forwards;
+  opacity: 0.9;
 }
 
-@keyframes float {
-  0% { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(-100vh); opacity: 0; }
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  opacity: 0.8;
 }

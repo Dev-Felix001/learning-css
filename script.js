@@ -2,51 +2,62 @@ const noBtn = document.getElementById("noBtn");
 const yesBtn = document.getElementById("yesBtn");
 const message = document.getElementById("message");
 const buttons = document.querySelector(".buttons");
-const yesSound = document.getElementById("yesSound");
-const noSound = document.getElementById("noSound");
+const decorations = document.getElementById("decorations");
 
-// Move NO button
-function moveNoButton() {
-  noBtn.style.animation = "shake 0.3s";
-  noSound.play();
+// === SMART NO BUTTON (distance-based) ===
+document.addEventListener("mousemove", (e) => {
+  const btnRect = noBtn.getBoundingClientRect();
 
-  setTimeout(() => {
-    noBtn.style.animation = "";
+  const btnX = btnRect.left + btnRect.width / 2;
+  const btnY = btnRect.top + btnRect.height / 2;
 
-    const maxX = buttons.clientWidth - noBtn.offsetWidth;
-    const maxY = buttons.clientHeight - noBtn.offsetHeight;
+  const distX = e.clientX - btnX;
+  const distY = e.clientY - btnY;
+  const distance = Math.sqrt(distX * distX + distY * distY);
 
-    noBtn.style.left = Math.random() * maxX + "px";
-    noBtn.style.top = Math.random() * maxY + "px";
-  }, 300);
-}
+  // Sensitivity radius
+  const dangerZone = 150;
 
-// Desktop hover
-noBtn.addEventListener("mouseenter", moveNoButton);
+  if (distance < dangerZone) {
+    const speed = (dangerZone - distance) * 0.8; // closer = faster
 
-// Mobile tap
-noBtn.addEventListener("touchstart", (e) => {
-  e.preventDefault();
-  moveNoButton();
+    const moveX = (-distX / distance) * speed;
+    const moveY = (-distY / distance) * speed;
+
+    let newLeft = noBtn.offsetLeft + moveX;
+    let newTop = noBtn.offsetTop + moveY;
+
+    // Keep inside container
+    newLeft = Math.max(0, Math.min(newLeft, buttons.clientWidth - noBtn.offsetWidth));
+    newTop = Math.max(0, Math.min(newTop, buttons.clientHeight - noBtn.offsetHeight));
+
+    noBtn.style.left = newLeft + "px";
+    noBtn.style.top = newTop + "px";
+  }
 });
 
 // YES click
 yesBtn.addEventListener("click", () => {
-  yesSound.play();
-  message.textContent = "Yaaay 💖 I knew it 😍";
+  message.textContent = "Yaaay 💕 I knew you’d say YES 😍💐";
 
-  for (let i = 0; i < 20; i++) {
-    createHeart();
+  for (let i = 0; i < 25; i++) {
+    createDecoration();
   }
 });
 
-// Hearts animation
-function createHeart() {
-  const heart = document.createElement("div");
-  heart.classList.add("heart");
-  heart.innerHTML = "💖";
-  heart.style.left = Math.random() * 100 + "vw";
-  document.body.appendChild(heart);
+// === Floating flowers & gifts ===
+const emojis = ["💖", "🌸", "🌹", "🎁", "💐", "❤️"];
 
-  setTimeout(() => heart.remove(), 4000);
+function createDecoration() {
+  const deco = document.createElement("div");
+  deco.classList.add("decoration");
+  deco.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+  deco.style.left = Math.random() * 100 + "vw";
+  deco.style.animationDuration = 3 + Math.random() * 3 + "s";
+  document.body.appendChild(deco);
+
+  setTimeout(() => deco.remove(), 6000);
 }
+
+// Continuous decorations
+setInterval(createDecoration, 600);
