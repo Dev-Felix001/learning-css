@@ -8,32 +8,47 @@
 <link rel="stylesheet" href="style.css">
 <script src="script.js"></script>
 <body>
-<style>
-div.relative {
-  position: relative;
-  width: 400px;
-  height: 200px;
-  border: 3px solid green;
-} 
 
-div.absolute {
-  position: absolute;
-  top: 80px;
-  right: 0;
-  width: 200px;
+<style>
+.container {
+  position: relative;
+}
+
+.black-box {
+  position: relative;
+  z-index: 1;
+  border: 2px solid black;
   height: 100px;
-  border: 3px solid red;
+  margin: 30px;
+}
+
+.gray-box {
+  position: absolute;
+  z-index: 3;
+  background: lightgray;
+  height: 60px;
+  width: 70%;
+  left: 50px;
+  top: 50px;
+}
+
+.green-box {
+  position: absolute;
+  z-index: 2;
+  background: lightgreen;
+  width: 35%;
+  left: 270px;
+  top: -15px;
+  height: 100px;
 }
 </style>
 </head>
 <body>
 
-<h2>Using position: absolute;</h2>
-
-<p>An element with position: absolute; is positioned relative to the nearest positioned ancestor:</p>
-
-<div class="relative">This div element has position: relative;
-  <div class="absolute">This div element has position: absolute;</div>
+<div class="container">
+  <div class="black-box">Black box</div>
+  <div class="gray-box">Gray box</div>
+  <div class="green-box">Green box</div>
 </div>
 
 </body>
