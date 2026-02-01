@@ -1,2 +1,2 @@
 [build]
-publish = "."   # since index.html is at repo root
+publish = "."
