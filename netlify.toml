@@ -1,2 +1,3 @@
 [build]
-publish = "."
+command = "npm run build"  # only if you need to generate dist
+publish = "dist"
