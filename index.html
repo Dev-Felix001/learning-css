@@ -6,9 +6,22 @@
   <link rel="stylesheet" href="style.css">
   <link rel="script" href="script.js">
 </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
-  <div class="container">
+  <!-- Background Video -->
+  <video autoplay muted loop id="bgVideo">
+    <source src="video.mp4" type="video/mp4">
+  </video>
+
+  <!-- Overlay -->
+  <div class="overlay">
     <h1>Will you be my Valentine? 💘</h1>
 
     <div class="buttons">
@@ -18,6 +31,10 @@
 
     <p id="message"></p>
   </div>
+
+  <!-- Sounds -->
+  <audio id="yesSound" src="yes.mp3"></audio>
+  <audio id="noSound" src="no.mp3"></audio>
 
   <script src="script.js"></script>
 </body>

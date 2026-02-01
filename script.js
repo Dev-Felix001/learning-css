@@ -1,21 +1,52 @@
 const noBtn = document.getElementById("noBtn");
 const yesBtn = document.getElementById("yesBtn");
 const message = document.getElementById("message");
-const container = document.querySelector(".buttons");
+const buttons = document.querySelector(".buttons");
+const yesSound = document.getElementById("yesSound");
+const noSound = document.getElementById("noSound");
 
-// Move NO button randomly
-noBtn.addEventListener("mouseenter", () => {
-  const maxX = container.clientWidth - noBtn.offsetWidth;
-  const maxY = container.clientHeight - noBtn.offsetHeight;
+// Move NO button
+function moveNoButton() {
+  noBtn.style.animation = "shake 0.3s";
+  noSound.play();
 
-  const randomX = Math.random() * maxX;
-  const randomY = Math.random() * maxY;
+  setTimeout(() => {
+    noBtn.style.animation = "";
 
-  noBtn.style.left = randomX + "px";
-  noBtn.style.top = randomY + "px";
+    const maxX = buttons.clientWidth - noBtn.offsetWidth;
+    const maxY = buttons.clientHeight - noBtn.offsetHeight;
+
+    noBtn.style.left = Math.random() * maxX + "px";
+    noBtn.style.top = Math.random() * maxY + "px";
+  }, 300);
+}
+
+// Desktop hover
+noBtn.addEventListener("mouseenter", moveNoButton);
+
+// Mobile tap
+noBtn.addEventListener("touchstart", (e) => {
+  e.preventDefault();
+  moveNoButton();
 });
 
-// YES button click
+// YES click
 yesBtn.addEventListener("click", () => {
-  message.textContent = "Yaaay! 💖 I knew you’d say YES 😍";
+  yesSound.play();
+  message.textContent = "Yaaay 💖 I knew it 😍";
+
+  for (let i = 0; i < 20; i++) {
+    createHeart();
+  }
 });
+
+// Hearts animation
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerHTML = "💖";
+  heart.style.left = Math.random() * 100 + "vw";
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 4000);
+}
