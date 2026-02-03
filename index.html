@@ -11,33 +11,35 @@
 <script src="script.js"></script>
 <body>
   <style>
-.div1 {
-  float: left;
-  padding: 10px;
-  border: 3px solid green;
-}
+    img {
+      border: 2px solid red;
+      border-radius: 10px;
+      height: 200px;
+      width: 200px;
+      overflow: right;
+      float: right;
+      margin: auto;
 
-.div2 {
-  padding: 10px;
-  border: 3px solid red;
-  width: 200px;
+    }
+    div {
+      border: 4px solid black;
+      padding: 10px;
+      margin: 10px;
+      background-color: lightgray;
+    }
+    .clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
-
-.div3 {
-  float: left;
-  padding: 10px;  
-  border: 3px solid green;
-}
-
-.div4 {
-  padding: 10px;
-  border: 3px solid red;
-  width: 200px;
-  clear: left;
-}
-</style>
-</head>
-<body>
+  </style>
+  <h2>using clear dev</h2>
+  <div class="clearfix">
+    <img class="imag1" src="./WhatsApp Image 2026-01-26 at 7.20.15 PM.jpeg" alt="my image">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, nihil quasi aut quae laboriosam molestiae, 
+      minus perferendis molestias dicta doloremque aliquid velit dolores 
+      non saepe accusamus mollitia adipisci esse at?</p>
+  </div>
 
 </body>
 </html>
