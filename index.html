@@ -10,41 +10,42 @@
 <link rel="stylesheet" href="style.css">
 <script src="script.js"></script>
 <body>
-  <style>
-* {
-  box-sizing :border-box;
-}
-
-.img-container {
-  float: left;
-  width: 33.33%;
+<style>
+span.a {
+  display: inline; /* the default for span */
   padding: 5px;
+  border: 2px solid red;  
 }
 
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
+span.b {
+  display: inline-block;
+  width: 100px;
+  height: 35px;
+  padding: 5px;
+  border: 2px solid red;    
+}
+
+span.c {
+  display: block;
+  width: 100px;
+  height: 35px;
+  padding: 5px;
+  border: 2px solid red;    
 }
 </style>
-  <h2>using clear dev</h2>
-  
-<div class="clearfix">
-  <div class="img-container">
-  <img src="./WhatsApp Image 2026-01-26 at 7.20.15 PM.jpeg" alt="Italy" style="width:100%">
-  </div>
-  <div class="img-container">
-  <img src="./WhatsApp Image 2026-01-26 at 7.20.15 PM.jpeg" alt="Forest" style="width:100%">
-  </div>
-  <div class="img-container">
-  <img src="./WhatsApp Image 2026-01-26 at 7.20.15 PM.jpeg" alt="Mountains" style="width:100%">
-  </div>
-</div>
+</head>
+<body>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, nihil quasi aut quae laboriosam molestiae, 
-      minus perferendis molestias dicta doloremque aliquid velit dolores 
-      non saepe accusamus mollitia adipisci esse at?</p>
-  </div>
+<h1>The display Property</h1>
+
+<h2>display: inline</h2>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="a">Aliquam</span> <span class="a">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+
+<h2>display: inline-block</h2>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="b">Aliquam</span> <span class="b">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+
+<h2>display: block</h2>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="c">Aliquam</span> <span class="c">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
 
 </body>
 </html>
