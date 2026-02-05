@@ -11,43 +11,35 @@
 <script src="script.js"></script>
 <body>
 <style>
-span.a {
-  display: inline; /* the default for span */
-  padding: 5px;
-  border: 2px solid red;  
+.nav {
+  background-color: lightgray; 
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-span.b {
+.nav li {
   display: inline-block;
-  width: 100px;
-  height: 35px;
-  padding: 5px;
-  border: 2px solid red;    
-}
-
-span.c {
-  display: block;
-  width: 100px;
-  height: 35px;
-  padding: 5px;
-  border: 2px solid red;    
+  font-size: 18px;
+  padding: 15px;
 }
 </style>
 </head>
 <body>
+<h1>Horizontal Navigation Menu</h1>
+<p>List items are displayed vertically by default. Here, we use display: inline-block to display them horizontally (side by side).</p>
 
-<h1>The display Property</h1>
-
-<h2>display: inline</h2>
-<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="a">Aliquam</span> <span class="a">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
-
-<h2>display: inline-block</h2>
-<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="b">Aliquam</span> <span class="b">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
-
-<h2>display: block</h2>
-<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="c">Aliquam</span> <span class="c">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+<ul class="nav">
+  <li><a href="#home">Home</a></li>
+  <li><a href="#about">About Us</a></li>
+  <li><a href="#clients">Our Clients</a></li>  
+  <li><a href="#contact">Contact Us</a></li>
+</ul>
 
 </body>
-</html>
+</html>git add .
+git commit -m "Describe the change"
+git push
+
 
 
