@@ -11,30 +11,31 @@
 <script src="script.js"></script>
 <body>
 <style>
-div.ex1 {
-  width: 500px;
-  margin: auto;
-  border: 3px solid #73AD21;
-}
-
-div.ex2 {
-  max-width: 500px;
-  margin: auto;
-  border: 3px solid #73AD21;
+div.sticky {
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  background-color: #cae8ca;
+  border: 2px solid #4CAF50;
 }
 </style>
 </head>
 <body>
 
-<h2>CSS Max-width</h2>
+<h2>Using position: sticky;</h2>
 
-<div class="ex1">This div element has width: 500px;</div>
-<br>
+<p>Try to scroll this page to understand how sticky works.</p>
 
-<div class="ex2">This div element has max-width: 500px;</div>
+<p>Here, when the sticky element reach the top of the page (top: 0), it sticks to this position!</p>
 
-<p><strong>Tip:</strong> Drag the browser window to smaller than 500px wide, to see the difference between 
-the two divs!</p>
+<div class="sticky">I have position sticky!</div>
+
+<div style="padding-bottom:2000px">
+<p>Scroll back up to remove the stickyness!</p>
+<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+</div>
 
 </body>
 </html>
