@@ -11,22 +11,27 @@
 <script src="script.js"></script>
 <body>
 <style>
-div {
+#container{
+  text-align:right;
   background-color: coral;
   width: 200px;
   height: 65px;
   border: 1px solid;
-  overflow: visible;
+  overflow: scroll;
+  margin: auto;
+  padding: 10px;
 }
 </style>
 </head>
 <body>
+<p> this is the paragrap use to demonstrate the diffrence between overflow charactarestis </p>
+<div id="containe">
+   this is the paragrap use to demonstrate the diffrence between overflow charactarestis <br>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint dolore soluta veritatis obcaecati, <br>
+    atque nesciunt, illum ratione repellendus architecto cupiditate aspernatur quo illo. <br>
+    Quidem mollitia nulla libero doloremque laboriosam dolor?
 
-<h2>Overflow: visible</h2>
-
-<p>By default, the overflow is visible, meaning that it is not clipped and it renders outside the element's box:</p>
-
-<div>You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+</div>
 
 </body>
 </html>
