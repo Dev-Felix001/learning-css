@@ -11,26 +11,22 @@
 <script src="script.js"></script>
 <body>
 <style>
-#overflowTest {
-  background: #04AA6D;
-  color: white;
-  padding: 15px;
-  width: 90%;
-  height: 100px;
-  overflow: scroll;
-  border: 1px solid #ccc;
+div {
+  background-color: coral;
+  width: 200px;
+  height: 65px;
+  border: 1px solid;
+  overflow: visible;
 }
 </style>
 </head>
 <body>
 
-<h2>CSS overflow Property</h2>
+<h2>Overflow: visible</h2>
 
-<p>The overflow property controls what happens to content that is too big to fit into an area.</p>
+<p>By default, the overflow is visible, meaning that it is not clipped and it renders outside the element's box:</p>
 
-<p>Here, scrollbars are added on overflow:</p>
-
-<div id="overflowTest">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.</div>
+<div>You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
 
 </body>
 </html>
