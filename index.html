@@ -11,30 +11,48 @@
 <script src="script.js"></script>
 <body>
 <style>
-div{
-  text-align:right;
-  background-color: coral;
-  width: 200px;
-  height: 65px;
-  border: 1px solid;
-  overflow-y:scroll;
-  margin: auto;
+div {
+  border: 3px solid green;
   padding: 10px;
+}
+
+.img1 {
+  float: right;
+}
+
+.img2 {
+  float: right;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 </style>
 </head>
 <body>
-<p> this is the paragrap use to demonstrate the diffrence between overflow charactarestis </p>
-<div>
-   this is the paragrap use to demonstrate the diffrence between overflow charactarestis <br>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint dolore soluta veritatis obcaecati, <br>
-    atque nesciunt, illum ratione repellendus architecto cupiditate aspernatur quo illo. <br>
-    Quidem mollitia nulla libero doloremque laboriosam dolor?
 
+<h2>Without Clearfix</h2>
+
+<p>The image is floated to the right. It is also taller than the element containing it, so it overflows outside of its container:</p>
+
+<div>
+  <img class="img1" src="pineapple.jpg" alt="Pineapple" width="170" height="170">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...
+</div>
+
+<h2 style="clear:right">Using the Clearfix Hack</h2>
+<p>Add the clearfix hack to the containing element, to fix this problem:</p>
+
+<div class="clearfix">
+  <img class="img2" src="pineapple.jpg" alt="Pineapple" width="170" height="170">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...
 </div>
 
 </body>
 </html>
+
 
 
 
