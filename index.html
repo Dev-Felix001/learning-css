@@ -11,17 +11,14 @@
 <script src="script.js"></script>
 <body>
 <style>
-div {
-  border: 3px solid green;
-  padding: 10px;
+* {
+  box-sizing: border-box;
 }
 
-.img1 {
-  float: right;
-}
-
-.img2 {
-  float: right;
+.img-container {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
 }
 
 .clearfix::after {
@@ -33,25 +30,26 @@ div {
 </head>
 <body>
 
-<h2>Without Clearfix</h2>
-
-<p>The image is floated to the right. It is also taller than the element containing it, so it overflows outside of its container:</p>
-
-<div>
-  <img class="img1" src="pineapple.jpg" alt="Pineapple" width="170" height="170">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...
-</div>
-
-<h2 style="clear:right">Using the Clearfix Hack</h2>
-<p>Add the clearfix hack to the containing element, to fix this problem:</p>
+<h2>Images Side by Side</h2>
+<p>Float images side by side:</p>
 
 <div class="clearfix">
-  <img class="img2" src="pineapple.jpg" alt="Pineapple" width="170" height="170">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...
+  <div class="img-container">
+  <img src="img_5terre.jpg" alt="Italy" style="width:100%">
+  </div>
+  <div class="img-container">
+  <img src="img_forest.jpg" alt="Forest" style="width:100%">
+  </div>
+  <div class="img-container">
+  <img src="img_mountains.jpg" alt="Mountains" style="width:100%">
+  </div>
 </div>
+
+<p>Note that we also use the clearfix hack to take care of the layout flow, and that we add the box-sizing property to make sure that the image container doesn't break due to extra padding. Try to remove this code to see the effect.</p>
 
 </body>
 </html>
+
 
 
 
